@@ -18,7 +18,7 @@ main(){
     char tecla;
     int l=1, c=1;
     system("cls");
-    printf("Para sair precione 'ESC'\n");
+    printf("Para sair precione '1'\n");
     printf("W, S, A, D, movimentam o personagem\n");
     printf("%c = Parede %c = Caixa %c = Boneco \n\n",178, 219, 6);
     printf("PRIMEIRA FASE\n");
@@ -32,6 +32,7 @@ main(){
     char mapa1tela[9][9]={{178,178,178,178,178,178,178,178,178},{178,' ',' ',' ',' ',' ',' ',' ',178},{178,' ',' ',' ',' ',' ',' ',' ',178},
                           {178,' ',' ',' ',' ',' ',' ',' ',178},{178,' ',' ',' ',' ',' ',' ',' ',178},{178,' ','O',' ',' ',' ',' ',' ',178},
                           {178,' ',' ',' ',' ',' ',' ',' ',178},{178,' ',' ',' ',' ',' ',' ',' ',178},{178,178,178,178,178,178,178,178,178}};
+
     system("cls");
     for(int il = 0; il<9; il++){
         for(int ic =0; ic<9; ic++){
@@ -55,6 +56,9 @@ main(){
                             mapa1tela[l-2][c]='O';
                             mapa1tela[l-1][c]=' ';
                         }
+                        else{
+                            l++;
+                        }
                     }
                     l--;
                 }
@@ -67,6 +71,9 @@ main(){
                             mapa1[l+1][c]=0;
                             mapa1tela[l+2][c]='O';
                             mapa1tela[l+1][c]=' ';
+                        }
+                        else{
+                            l--;
                         }
                     }
                     l++;
@@ -81,6 +88,9 @@ main(){
                             mapa1tela[l][c-2]='O';
                             mapa1tela[l][c-1]=' ';
                         }
+                        else{
+                            c++;
+                        }
                     }
                     c--;
                 }
@@ -94,9 +104,15 @@ main(){
                             mapa1tela[l][c+2]='O';
                             mapa1tela[l][c+1]=' ';
                         }
+                        else{
+                            c--;
+                        }
                     }
                     c++;
                 }
+            break;
+            case '1':
+                return 0;
             break;
         }
         system("cls");
