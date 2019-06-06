@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
-#include <string.h>
+
 //----------------------------------------------------------------------------------------------------------------------------------
 void gotoxy(int x, int y)
 {
